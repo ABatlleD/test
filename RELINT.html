@@ -1,907 +1,1301 @@
 <!DOCTYPE html>
-<!-- saved from url=(0030)https://porlahabana.ch.gob.cu/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RELINT - Direccion de Relaciones Internacionales de La Habana. Comercio Exterior, Inversion Extranjera, Colaboracion Economica y Relaciones Internacionales.">
+    <meta name="author" content="RELINT La Habana">
+    <title>RELINT - La Habana, Ciudad de Oportunidades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #0f2b46;
+            --primary-light: #1a3d5c;
+            --primary-dark: #091e33;
+            --accent: #00b4d8;
+            --accent-light: #48cae4;
+            --accent-dark: #0096c7;
+            --teal: #2ec4b6;
+            --gold: #e9c46a;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+            --radius-sm: 0.375rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --transition: 250ms ease;
+        }
 
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--gray-700);
+            background: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--accent-dark); text-decoration: none; transition: color var(--transition); }
+        a:hover { color: var(--accent); }
+        a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+            outline: 2px solid var(--accent); outline-offset: 2px;
+        }
+        ul { list-style: none; }
+        h1,h2,h3,h4,h5,h6 { font-family: var(--font-heading); color: var(--primary); line-height: 1.2; }
+        h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 700; }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2.5rem); font-weight: 600; }
+        h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 600; }
+        h4 { font-size: 1.35rem; font-weight: 600; }
+        h5 { font-size: 1.125rem; font-weight: 500; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
 
-    <title>RELINT</title>
-    <link rel="shortcut icon" href="https://porlahabana.ch.gob.cu/static/frontend/img/favicon.ico">
+        /* Section defaults */
+        .section { padding: 6rem 0; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { margin-bottom: 1rem; position: relative; display: inline-block; }
+        .section-header h2::after {
+            content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+            width: 60px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal));
+            border-radius: 9999px;
+        }
+        .section-header p { color: var(--gray-500); max-width: 600px; margin: 1.5rem auto 0; font-size: 1.05rem; }
 
-    <!-- Global Stylesheets -->
-    
-    <link href="./RELINT_files/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./RELINT_files/font-awesome.min.css">
-    <link rel="stylesheet" href="./RELINT_files/animate.min.css">
-    <link rel="stylesheet" href="./RELINT_files/owl.carousel.min.css">
-    <link rel="stylesheet" href="./RELINT_files/owl.theme.default.min.css">
-    <link rel="stylesheet" href="./RELINT_files/style.css">
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.75rem 1.75rem; font-family: var(--font-body); font-size: 0.9rem;
+            font-weight: 600; border: none; border-radius: 9999px; cursor: pointer;
+            transition: all var(--transition); text-decoration: none; line-height: 1.4;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+            color: var(--white); box-shadow: 0 4px 15px rgba(0,180,216,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,180,216,0.4); color: var(--white); }
+        .btn-secondary { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.5); }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); border-color: var(--white); color: var(--white); }
+        .btn-outline { background: transparent; color: var(--accent-dark); border: 2px solid var(--accent-dark); }
+        .btn-outline:hover { background: var(--accent-dark); color: var(--white); }
 
-    <link rel="stylesheet" href="./RELINT_files/shop.css">
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
 
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--primary-dark); color: rgba(255,255,255,0.8);
+            font-size: 0.85rem; padding: 0.5rem 0;
+        }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+        .top-bar-left { display: flex; align-items: center; gap: 1.5rem; }
+        .top-bar-left a, .top-bar-left span { color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 0.25rem; }
+        .top-bar-left a:hover { color: var(--accent-light); }
+        .top-bar-right { display: flex; align-items: center; gap: 1rem; }
+        .social-links { display: flex; gap: 0.5rem; }
+        .social-links a {
+            width: 30px; height: 30px; border-radius: 50%;
+            background: rgba(255,255,255,0.1); display: flex; align-items: center;
+            justify-content: center; color: rgba(255,255,255,0.8); font-size: 0.8rem;
+            transition: all 150ms ease;
+        }
+        .social-links a:hover { background: var(--accent); color: var(--white); transform: translateY(-2px); }
 
-    <link rel="stylesheet" href="./RELINT_files/bootstrap-4.min.css">
-    <link rel="stylesheet" href="./RELINT_files/select2.min.css">
-    <!-- Toastr -->
-    <link rel="stylesheet" href="./RELINT_files/toastr.min.css">
+        /* ===== HEADER ===== */
+        .header {
+            position: sticky; top: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all var(--transition);
+        }
+        .header.scrolled { box-shadow: var(--shadow-lg); }
+        .header .container { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+        .logo { display: flex; align-items: center; gap: 0.75rem; }
+        .logo-icon {
+            width: 44px; height: 44px; background: linear-gradient(135deg, var(--primary), var(--accent-dark));
+            border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center;
+            color: var(--white); font-weight: 700; font-size: 1.1rem; font-family: var(--font-heading);
+        }
+        .logo-text { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .logo-text span { color: var(--accent-dark); }
+
+        /* Desktop nav */
+        .nav-desktop { display: flex; align-items: center; gap: 0.25rem; }
+        .nav-desktop > li { position: relative; }
+        .nav-desktop > li > a {
+            display: flex; align-items: center; gap: 0.3rem;
+            padding: 0.5rem 0.9rem; font-size: 0.9rem; font-weight: 500;
+            color: var(--gray-700); border-radius: var(--radius-sm);
+            transition: all 150ms ease;
+        }
+        .nav-desktop > li > a:hover, .nav-desktop > li > a[aria-expanded="true"] {
+            color: var(--accent-dark); background: var(--gray-50);
+        }
+        .nav-desktop > li > a .chevron {
+            font-size: 0.6rem; transition: transform 150ms ease; margin-top: 1px;
+        }
+        .nav-desktop > li:hover > a .chevron { transform: rotate(180deg); }
+
+        /* Dropdown */
+        .dropdown-menu {
+            position: absolute; top: 100%; left: 0; min-width: 240px;
+            background: var(--white); border-radius: var(--radius-md);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12); border: 1px solid var(--gray-100);
+            padding: 0.5rem; opacity: 0; visibility: hidden;
+            transform: translateY(10px); transition: all 200ms ease;
+            z-index: 100;
+        }
+        .nav-desktop > li:hover > .dropdown-menu,
+        .nav-desktop > li:focus-within > .dropdown-menu {
+            opacity: 1; visibility: visible; transform: translateY(0);
+        }
+        .dropdown-menu a {
+            display: block; padding: 0.6rem 1rem; font-size: 0.88rem;
+            color: var(--gray-600); border-radius: var(--radius-sm);
+            transition: all 150ms ease;
+        }
+        .dropdown-menu a:hover { background: var(--gray-50); color: var(--accent-dark); padding-left: 1.25rem; }
+
+        /* Mobile toggle */
+        .nav-toggle {
+            display: none; background: none; border: none; cursor: pointer;
+            width: 40px; height: 40px; position: relative;
+            flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+        }
+        .nav-toggle span {
+            display: block; width: 24px; height: 2px; background: var(--gray-700);
+            border-radius: 2px; transition: all 200ms ease;
+        }
+        .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-toggle.active span:nth-child(2) { opacity: 0; }
+        .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
+        /* Search in nav */
+        .nav-search {
+            display: flex; align-items: center; margin-left: 0.5rem;
+        }
+        .nav-search button {
+            width: 36px; height: 36px; border: none; background: var(--gray-50);
+            border-radius: 50%; cursor: pointer; color: var(--gray-500);
+            display: flex; align-items: center; justify-content: center;
+            transition: all 150ms ease;
+        }
+        .nav-search button:hover { background: var(--accent); color: var(--white); }
+        .search-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15,43,70,0.95); z-index: 2000;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all 300ms ease;
+        }
+        .search-overlay.active { opacity: 1; visibility: visible; }
+        .search-overlay-inner { width: 90%; max-width: 600px; }
+        .search-overlay input {
+            width: 100%; padding: 1.25rem 1.5rem; font-size: 1.25rem;
+            border: none; border-bottom: 3px solid var(--accent);
+            background: transparent; color: var(--white);
+            font-family: var(--font-body); outline: none;
+        }
+        .search-overlay input::placeholder { color: rgba(255,255,255,0.5); }
+        .search-close {
+            position: absolute; top: 2rem; right: 2rem;
+            background: none; border: none; color: var(--white);
+            font-size: 1.5rem; cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative; min-height: 85vh;
+            display: flex; align-items: center;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(0,180,216,0.05)" d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,213.3C672,203,768,149,864,138.7C960,128,1056,160,1152,170.7C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"/></svg>') no-repeat bottom center;
+            background-size: cover; opacity: 0.3;
+        }
+        .hero::after {
+            content: ''; position: absolute; top: -50%; right: -20%;
+            width: 600px; height: 600px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,180,216,0.15) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+        .hero .container { position: relative; z-index: 1; }
+        .hero-content { max-width: 700px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: rgba(0,180,216,0.15); color: var(--accent-light);
+            padding: 0.5rem 1rem; border-radius: 9999px; font-size: 0.85rem;
+            font-weight: 500; margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+        .hero-badge i { font-size: 0.7rem; }
+        .hero h1 {
+            color: var(--white); margin-bottom: 1.5rem;
+            animation: fadeInUp 0.6s ease 0.2s forwards; opacity: 0;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(90deg, var(--accent), var(--teal));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            color: rgba(255,255,255,0.75); font-size: 1.15rem; max-width: 550px;
+            margin-bottom: 2rem; line-height: 1.7;
+            animation: fadeInUp 0.6s ease 0.4s forwards; opacity: 0;
+        }
+        .hero-actions {
+            display: flex; gap: 1rem; flex-wrap: wrap;
+            animation: fadeInUp 0.6s ease 0.6s forwards; opacity: 0;
+        }
+        .hero-stats {
+            display: flex; gap: 3rem; margin-top: 4rem;
+            animation: fadeInUp 0.6s ease 0.8s forwards; opacity: 0;
+        }
+        .hero-stat { text-align: center; }
+        .hero-stat .number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: var(--accent); }
+        .hero-stat .label { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.25rem; }
+        .hero-scroll {
+            position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+            color: rgba(255,255,255,0.5); font-size: 1.5rem;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        /* ===== ABOUT / MISSION ===== */
+        .about { background: var(--gray-50); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .about-content h2 { margin-bottom: 1.5rem; }
+        .about-content p { color: var(--gray-600); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .about-features { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+        .about-feature {
+            display: flex; align-items: flex-start; gap: 1rem;
+            padding: 1rem; background: var(--white); border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm); transition: all var(--transition);
+        }
+        .about-feature:hover { box-shadow: var(--shadow-md); transform: translateX(5px); }
+        .about-feature-icon {
+            width: 48px; height: 48px; min-width: 48px;
+            background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(46,196,182,0.1));
+            border-radius: var(--radius-md); display: flex; align-items: center;
+            justify-content: center; color: var(--accent-dark); font-size: 1.2rem;
+        }
+        .about-feature h5 { color: var(--primary); margin-bottom: 0.25rem; }
+        .about-feature p { font-size: 0.9rem; color: var(--gray-500); margin: 0; }
+
+        /* ===== SERVICE CARDS ===== */
+        .services { background: var(--white); }
+        .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .service-card {
+            position: relative; padding: 2.5rem 2rem; border-radius: var(--radius-lg);
+            background: var(--white); border: 1px solid var(--gray-200);
+            transition: all 300ms ease; overflow: hidden;
+        }
+        .service-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0;
+            height: 4px; background: linear-gradient(90deg, var(--accent), var(--teal));
+            transform: scaleX(0); transform-origin: left; transition: transform 300ms ease;
+        }
+        .service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-xl); border-color: transparent; }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card-icon {
+            width: 64px; height: 64px; border-radius: var(--radius-lg);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 1.5rem; transition: all 300ms ease;
+        }
+        .service-card:nth-child(1) .service-card-icon { background: rgba(0,180,216,0.1); color: var(--accent-dark); }
+        .service-card:nth-child(2) .service-card-icon { background: rgba(46,196,182,0.1); color: var(--teal); }
+        .service-card:nth-child(3) .service-card-icon { background: rgba(233,196,106,0.1); color: #d4a03a; }
+        .service-card:nth-child(4) .service-card-icon { background: rgba(15,43,70,0.1); color: var(--primary); }
+        .service-card:hover .service-card-icon { transform: scale(1.1); }
+        .service-card h4 { margin-bottom: 0.75rem; font-size: 1.15rem; }
+        .service-card p { color: var(--gray-500); font-size: 0.92rem; line-height: 1.65; }
+
+        /* ===== PROJECTS ===== */
+        .projects {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--white); position: relative;
+        }
+        .projects .section-header h2 { color: var(--white); }
+        .projects .section-header h2::after { background: linear-gradient(90deg, var(--accent), var(--gold)); }
+        .projects .section-header p { color: rgba(255,255,255,0.6); }
+        .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .project-card {
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-lg); overflow: hidden;
+            transition: all 300ms ease; backdrop-filter: blur(10px);
+        }
+        .project-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+        .project-card-img {
+            width: 100%; height: 200px; object-fit: cover;
+            transition: transform 500ms ease;
+        }
+        .project-card:hover .project-card-img { transform: scale(1.05); }
+        .project-card-img-wrapper { overflow: hidden; position: relative; }
+        .project-card-img-wrapper::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(15,43,70,0.4) 0%, transparent 50%);
+        }
+        .project-card-body { padding: 1.5rem; }
+        .project-card-body h4 { color: var(--white); margin-bottom: 0.75rem; font-size: 1.05rem; line-height: 1.4; }
+        .project-card-body p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin-bottom: 1rem; }
+        .project-card-body a {
+            color: var(--accent-light); font-size: 0.9rem; font-weight: 500;
+            display: inline-flex; align-items: center; gap: 0.35rem;
+        }
+        .project-card-body a:hover { color: var(--white); gap: 0.6rem; }
+
+        /* ===== NEWS ===== */
+        .news { background: var(--gray-50); }
+        .news-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .news-card {
+            display: flex; background: var(--white); border-radius: var(--radius-lg);
+            overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--gray-100);
+            transition: all 300ms ease;
+        }
+        .news-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .news-card-img {
+            width: 220px; min-width: 220px; object-fit: cover;
+        }
+        .news-card-body { padding: 1.5rem; display: flex; flex-direction: column; }
+        .news-card-date {
+            font-size: 0.8rem; color: var(--accent-dark); font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;
+        }
+        .news-card-body h4 { font-size: 1.05rem; margin-bottom: 0.75rem; line-height: 1.4; }
+        .news-card-body p { color: var(--gray-500); font-size: 0.9rem; flex-grow: 1; margin-bottom: 1rem; }
+        .news-card-body .btn { align-self: flex-start; padding: 0.5rem 1.25rem; font-size: 0.85rem; }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            position: relative;
+        }
+        .contact::before {
+            content: ''; position: absolute; inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.02)" d="M0,96L80,112C160,128,320,160,480,154.7C640,149,800,107,960,101.3C1120,96,1280,128,1360,144L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"/></svg>') no-repeat top center;
+            background-size: cover;
+        }
+        .contact .container { position: relative; z-index: 1; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .contact-info { color: var(--white); }
+        .contact-info h2 { color: var(--white); margin-bottom: 1rem; }
+        .contact-info > p { color: rgba(255,255,255,0.7); margin-bottom: 2rem; font-size: 1.05rem; }
+        .contact-detail {
+            display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.5rem;
+        }
+        .contact-detail-icon {
+            width: 44px; height: 44px; min-width: 44px;
+            border-radius: var(--radius-md); background: rgba(0,180,216,0.15);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent-light); font-size: 1rem;
+        }
+        .contact-detail h5 { color: var(--white); margin-bottom: 0.25rem; font-family: var(--font-body); font-weight: 600; }
+        .contact-detail p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .contact-form {
+            background: rgba(255,255,255,0.07); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-xl);
+            padding: 2.5rem;
+        }
+        .contact-form h3 { color: var(--white); margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block; color: rgba(255,255,255,0.8); font-size: 0.88rem;
+            font-weight: 500; margin-bottom: 0.4rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 0.85rem 1rem; font-family: var(--font-body);
+            font-size: 0.95rem; color: var(--white);
+            background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-md); outline: none;
+            transition: all 150ms ease;
+        }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--accent); background: rgba(255,255,255,0.12); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .contact-form .btn-primary { width: 100%; justify-content: center; padding: 0.9rem; font-size: 1rem; }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--gray-900); color: rgba(255,255,255,0.7); padding: 4rem 0 0; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; }
+        .footer h5 { color: var(--white); font-family: var(--font-body); font-weight: 600; font-size: 1rem; margin-bottom: 1.25rem; }
+        .footer-about p { font-size: 0.92rem; line-height: 1.7; margin-bottom: 1rem; }
+        .footer-about .social-links a { background: rgba(255,255,255,0.08); }
+        .footer-links li { margin-bottom: 0.6rem; }
+        .footer-links a {
+            color: rgba(255,255,255,0.6); font-size: 0.9rem;
+            display: flex; align-items: center; gap: 0.5rem; transition: all 150ms ease;
+        }
+        .footer-links a::before {
+            content: ''; width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent); opacity: 0; transition: all 150ms ease;
+        }
+        .footer-links a:hover { color: var(--white); padding-left: 0.5rem; }
+        .footer-links a:hover::before { opacity: 1; }
+        .footer-contact address { font-style: normal; font-size: 0.9rem; line-height: 1.8; }
+        .footer-contact address i { color: var(--accent); margin-right: 0.5rem; width: 16px; }
+        .footer-bottom {
+            margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.4);
+        }
+        .footer-bottom a { color: var(--accent); }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            position: fixed; bottom: 2rem; right: 2rem;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-dark), var(--accent));
+            color: var(--white); border: none; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,180,216,0.3);
+            opacity: 0; visibility: hidden; transform: translateY(10px);
+            transition: all 300ms ease; z-index: 900;
+        }
+        .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .back-to-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,180,216,0.5); }
+
+        /* ===== MODALS ===== */
+        .modal-overlay {
+            position: fixed; inset: 0; background: rgba(15,43,70,0.8);
+            backdrop-filter: blur(5px); z-index: 3000;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all 300ms ease;
+            padding: 1.5rem;
+        }
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content {
+            background: var(--white); border-radius: var(--radius-xl);
+            max-width: 600px; width: 100%; max-height: 85vh; overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25); transform: scale(0.9) translateY(20px);
+            transition: all 300ms ease;
+        }
+        .modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
+        .modal-content.modal-lg { max-width: 800px; }
+        .modal-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 2rem; border-bottom: 1px solid var(--gray-100);
+        }
+        .modal-header h3 { margin: 0; }
+        .modal-close {
+            width: 36px; height: 36px; border-radius: 50%; border: none;
+            background: var(--gray-100); cursor: pointer; display: flex;
+            align-items: center; justify-content: center; color: var(--gray-500);
+            transition: all 150ms ease;
+        }
+        .modal-close:hover { background: var(--gray-200); color: var(--gray-700); }
+        .modal-body { padding: 2rem; color: var(--gray-600); line-height: 1.7; }
+        .modal-body ol { padding-left: 1.25rem; }
+        .modal-body ol li { margin-bottom: 0.75rem; padding-left: 0.5rem; }
+        .modal-body img { border-radius: var(--radius-md); margin: 0 auto; }
+        .modal-footer { padding: 1rem 2rem 1.5rem; display: flex; justify-content: flex-end; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .projects-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { gap: 2.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar { display: none; }
+            .nav-desktop { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-mobile {
+                position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px);
+                background: var(--white); z-index: 999; padding: 1.5rem;
+                overflow-y: auto; transform: translateX(100%);
+                transition: transform 300ms ease;
+            }
+            .nav-mobile.active { transform: translateX(0); }
+            .nav-mobile > li { border-bottom: 1px solid var(--gray-100); }
+            .nav-mobile > li > a {
+                display: flex; justify-content: space-between; align-items: center;
+                padding: 1rem 0; color: var(--gray-700); font-weight: 500;
+            }
+            .nav-mobile .mobile-dropdown {
+                max-height: 0; overflow: hidden; transition: max-height 300ms ease;
+            }
+            .nav-mobile .mobile-dropdown.open { max-height: 500px; }
+            .nav-mobile .mobile-dropdown a {
+                display: block; padding: 0.75rem 1rem; color: var(--gray-500);
+                font-size: 0.9rem; border-left: 2px solid var(--gray-200);
+                margin-left: 0.5rem;
+            }
+            .nav-mobile .mobile-dropdown a:hover { color: var(--accent-dark); border-color: var(--accent); }
+
+            .hero { min-height: 70vh; }
+            .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+            .hero-stat .number { font-size: 2rem; }
+
+            .about-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .news-grid { grid-template-columns: 1fr; }
+            .news-card { flex-direction: column; }
+            .news-card-img { width: 100%; min-width: 100%; height: 200px; }
+            .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .section { padding: 3.5rem 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-actions { flex-direction: column; }
+            .hero-actions .btn { width: 100%; justify-content: center; }
+        }
+
+        /* Print */
+        @media print {
+            .header, .top-bar, .back-to-top, .nav-toggle { display: none; }
+            .hero { min-height: auto; padding: 2rem 0; }
+            .section { padding: 2rem 0; }
+        }
+    </style>
 </head>
 
 <body id="page-top">
 
-<!--====================================================
-                         HEADER
-======================================================-->
-
-<header>
-
-    <!-- Top Navbar  -->
-    <div class="top-menubar" id="home1">
-        <div class="topmenu">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-                        <ul class="list-inline top-contacts">
-                            <!-- <li>
-                                <i class="fa fa-envelope"></i> Correo: <a
-                                    href=""></a>
-                            </li> -->
-                            <li>
-                                <i class="fa fa-phone"></i> Teléfonos: (+53) 78015566 &amp; 78016655
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="list-inline top-data">
-                            
-                                <li><a href="https://facebook.com/" target="_empty"><i class="fa top-social fa-facebook"></i></a>
-                                </li>
-                            
-                                <li><a href="https://twitter.com/" target="_empty"><i class="fa top-social fa-twitter"></i></a>
-                                </li>
-                            
-                            <li>
-                                <form id="LanguageForm" action="https://porlahabana.ch.gob.cu/i18n/setlang/" method="post" style="margin-right: 100px">
-                                    <input type="hidden" name="csrfmiddlewaretoken" value="6JRjfmDBk4u96wsOpfYpkixGyJBxcD0yLuAu4GDy3agyaX71TVdJZ6lzYO4oBday">
-                                    <input name="next" type="hidden" value="">
-                                    
-                                    
-                                    
-                                        
-                                            <input name="language" type="hidden" value="en">
-                                            <a href="https://porlahabana.ch.gob.cu/#" type="button" onclick="document.forms[&#39;LanguageForm&#39;].submit(); return false;" title="Translate">
-                                                <img src="./RELINT_files/en.png" width="25px" height="25px" style="margin-top: -5px">
-                                            </a>
-                                        
-                                    
-                                        
-                                    
-                                </form>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Navbar -->
-    <div style="height: auto;"></div><nav class="navbar navbar-expand-lg navbar-light" id="mainNav" data-toggle="affix">
-        <div class="container">
-            
-            
-            
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link smooth-scroll" href="https://porlahabana.ch.gob.cu/">
-                        <small>Inicio</small>
-                    </a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" href="https://porlahabana.ch.gob.cu/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Identidad</small>
-                        </a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink" style="display: none;">
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/#" data-toggle="modal" data-target="#mision">Misión</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/#" data-toggle="modal" data-target="#funcionesg">
-                                Funciones Generales</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/#" data-toggle="modal" data-target="#organigrama">Organigrama</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/directivos">Principales Directivos</a>
-                            
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" href="https://porlahabana.ch.gob.cu/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Exportaciones</small>
-                        </a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/comercio-exterior/leyes-y-regulaciones">
-                                Leyes y regulaciones</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/comercio-exterior/la-habana-exporta/1">
-                                La Habana Exporta</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/comercio-exterior/la-habana-importa/1">
-                                La Habana Importa</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/comercio-exterior/sustitucion-de-importaciones/1">
-                                Sustitución de Importaciones</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" href="https://porlahabana.ch.gob.cu/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Inversión</small>
-                        </a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/inversion-extranjera/leyes-y-regulaciones">
-                                Leyes y regulaciones</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/inversion-extranjera/cartera-de-oportunidades/1">
-                                Cartera de Oportunidades</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/inversion-extranjera/inversiones-en-desarrollo/1">
-                                Inversiones en Desarrollo</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/inversion-extranjera/sectores-priorizados/1">
-                                Sectores Priorizados</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" href="https://porlahabana.ch.gob.cu/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Colaboración</small>
-                        </a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/colaboracion-internacional/leyes-y-regulaciones">
-                                Leyes y regulaciones</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/colaboracion-internacional/la-habana-ofrece/1">
-                                La Habana Ofrece</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/colaboracion-internacional/la-habana-recibe/1">
-                                La Habana Recibe</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/colaboracion-internacional/cartera-de-proyectos/1">
-                                Cartera de Proyectos</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/colaboracion-internacional/incubadora-de-proyectos/1">
-                                Incubadora de Proyectos</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle smooth-scroll" href="https://porlahabana.ch.gob.cu/#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <small>Relaciones Internacionales</small>
-                        </a>
-                        <div class="dropdown-menu dropdown-cust" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/relaciones-internacionales/leyes-y-regulaciones">
-                                Leyes y Regulaciones</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/relaciones-internacionales/estudiantes-extranjeros-en-la-habana/1">
-                                Estudiantes Extranjeros en La Habana</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/relaciones-internacionales/habaneros-por-el-mundo/1">
-                                Habaneros por el mundo</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/relaciones-internacionales/extranjeros-en-la-habana/1">
-                                Extranjeros en La Habana</a>
-                            <a class="dropdown-item" href="https://porlahabana.ch.gob.cu/relaciones-internacionales/amigos-de-la-habana/1">
-                                Amigos de La Habana</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link smooth-scroll" href="https://porlahabana.ch.gob.cu/noticias/1" aria-haspopup="true" aria-expanded="false">
-                            <small>Noticias</small>
-                        </a>
-                    </li>
-                    
-                    <li>
-                        <i class="search fa fa-search search-btn"></i>
-                        <div class="search-open">
-                            <div class="input-group animated fadeInUp">
-                                <a class="hidden" id="buscar_a" href="https://porlahabana.ch.gob.cu/"></a>
-                                <input type="text" class="form-control" placeholder="Buscar" aria-describedby="basic-addon2" id="id_palabra">
-                                <span class="input-group-addon" id="basic-addon2">IR</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="top-menubar-nav">
-                            <div class="topmenu ">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-9">
-                                            <ul class="list-inline top-contacts">
-                                                <li>
-                                                    <i class="fa fa-envelope"></i> Correo: <a href="mailto:porlahabana@goblh.gob.cu">porlahabana@goblh.gob.cu</a>
-                                                </li>
-                                                <li>
-                                                    <i class="fa fa-phone"></i> Teléfonos: (+53) 78025566
-                                                    &amp; 78026655
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <ul class="list-inline top-data">
-                                                
-                                                    <li><a href="https://facebook.com/" target="_empty"><i class="fa top-social fa-facebook"></i></a>
-                                                    </li>
-                                                
-                                                    <li><a href="https://twitter.com/" target="_empty"><i class="fa top-social fa-twitter"></i></a>
-                                                    </li>
-                                                
-                                                <li>
-                                                    <form id="LanguageForm" action="https://porlahabana.ch.gob.cu/i18n/setlang/" method="post" style="margin-right: 100px">
-                                                        <input type="hidden" name="csrfmiddlewaretoken" value="6JRjfmDBk4u96wsOpfYpkixGyJBxcD0yLuAu4GDy3agyaX71TVdJZ6lzYO4oBday">
-                                                        <input name="next" type="hidden" value="">
-                                                        
-                                                        
-                                                        
-                                                            
-                                                                <input name="language" type="hidden" value="en">
-                                                                <a href="https://porlahabana.ch.gob.cu/#" type="button" onclick="document.forms[&#39;LanguageForm&#39;].submit(); return false;" title="Translate">
-                                                                    <img src="./RELINT_files/en.png" width="25px" height="25px" style="margin-top: -5px">
-                                                                </a>
-                                                            
-                                                        
-                                                            
-                                                        
-                                                    </form>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<!--====================================================
-                    LOGIN OR REGISTER
-======================================================-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--====================================================
-                         HOME
-======================================================-->
-
-    <section id="home-shop">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner" role="listbox">
-                <!-- Slide One - Set the background image for this slide in the line below -->
-                <div class="carousel-item" style="background-image: url(&#39;static/upload/banner/1089344815_mD25i5n.jpg&#39;)">
-                </div>
-                <div class="carousel-item active" style="background-image: url(&#39;static/upload/banner/malecon.jpg&#39;)">
-                </div>
-                <div class="carousel-item" style="background-image: url(&#39;static/upload/banner/habaan500grande_YOwmeIa.jpg&#39;)">
-                </div>
-                
-                    <div class="hero ">
-                        <hgroup class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-                            <h1>La Habana <span><a href="https://porlahabana.ch.gob.cu/" class="typewrite" data-period="2000" data-type="[ &quot; Ciudad de Oportunidades&quot;, &quot; Ciudad de Sueños&quot;, &quot; Real y Maravillosa&quot;, &quot; Ciudad de Encantos&quot;]"><span class="wrap"> Ciuda</span></a></span></h1>
-                            <h3>no dude más</h3>
-                        </hgroup>
-                        <input type="button" value="Contáctanos" class="btn btn-general btn-green wow fadeInUp" role="button" onclick="document.getElementById(&#39;form_title&#39;).scrollIntoView();" style="visibility: visible; animation-name: fadeInUp;">
-                    </div>
-                
-            </div>
-            <a class="carousel-control-prev" href="https://porlahabana.ch.gob.cu/#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="https://porlahabana.ch.gob.cu/#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </section>
-
-
-
-    <!--====================================================
-                            ABOUT
-    ======================================================-->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="row title-bar">
-                <div class="col-md-12">
-                    <h1 class="wow fadeInUp" style="visibility: hidden; animation-name: none;">MISIÓN</h1>
-                    <div class="heading-border"></div>
-                    <p class="wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-                        
-                            </p><p>Atender en La Habana las actividades de, Comercio
-                    Exterior, Inversión Extranjera, Colaboración Económica y Relaciones Internacionales para elevar la
-                    eficiencia y desarrollar
-                    las potencialidades en estas esferas, logrando la máxima participacion de los municipios y las
-                    entidades.</p>
-                        
-
-                    <p></p>
-                    <div class="title-but">
-                        <button class="btn btn-general btn-green" role="button">Leer más</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About right side withBG parallax -->
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 bg-matisse">
-                    <div class="about-content-box wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
-                        <i class="fa fa-vcard-o"></i>
-                        <h5>Comercio Exterior</h5>
-                        <p class="desc">
-                            Priorizar la sustitución de importaciones asi como el análisis de productos
-                                posibles a exportar.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 bg-chathams">
-                    <div class="about-content-box wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
-                        <i class="fa fa-arrow-circle-down"></i>
-                        <h5>Inversión Extranjera</h5>
-                        <p class="desc">
-                            Orientar y coordinar el fomento de ofertas exportables de bienes y servicios
-                                en
-                                las
-                                entidades y en los municipios. Promoviendo las producciones competitivas
-                                y los estudios de mercado
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-3 bg-matisse">
-                    <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-                        <i class="fa fa-arrows-alt"></i>
-                        <h5>Colaboración Económica</h5>
-                        <p class="desc">
-                            Promover que se diseñen proyectos para estionar la colaboración de
-                                organizaciones internacionales, países y amigos de Cuba que desean constribuir a la
-                                solución de problemas concretos en la ciudad.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 bg-chathams">
-                    <div class="about-content-box wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
-                        <i class="fa fa-handshake-o"></i>
-                        <h5>Relaciones Internacionales</h5>
-                        <p class="desc">
-                            Coordinar y controlar las acciones que se corresponden con la política
-                                aprobada
-                                por el país para la atención a los becarios extranjeros que cursan estudios o residen en
-                                el
-                                territorio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--====================================================
-                            OFFER
-    ======================================================-->
-    <section id="comp-offer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.2s" style="visibility: hidden; animation-delay: 0.2s; animation-name: none;">
-                    <h2>Cartera</h2>
-                    <h2>de Proyectos</h2>
-                    <div class="heading-border-light"></div>
-                    <a href="https://porlahabana.ch.gob.cu/colaboracion-internacional/cartera-de-proyectos/1" class="btn btn-general btn-green" role="button">Ver listado</a>
-                    <a href="https://porlahabana.ch.gob.cu/#contact-h" class="btn btn-general btn-white" role="button">
-                        Contáctanos ahora</a>
-                </div>
-                
-                    
-                        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-                            <div class="desc-comp-offer-cont">
-                                <div class="thumbnail-blogs">
-                                    <div class="caption">
-                                        <i class="fa fa-chain"></i>
-                                    </div>
-                                    <img src="./RELINT_files/banno.png" height="250px" width="350px" alt="foto">
-                                </div>
-                                <h3>PRODUCCIÓN DE MUEBLES SANITARIOS</h3>
-                                <p class="desc">Construcción y operación de una planta utilizan... </p>
-                                <a href="https://porlahabana.ch.gob.cu/colaboracion-internacional/cartera-de-proyectos/detalle/3">
-                                    <i class="fa fa-arrow-circle-o-right"></i> Lea más</a>
-                            </div>
-                        </div>
-                    
-
-                
-                    
-                        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-                            <div class="desc-comp-offer-cont">
-                                <div class="thumbnail-blogs">
-                                    <div class="caption">
-                                        <i class="fa fa-chain"></i>
-                                    </div>
-                                    <img src="./RELINT_files/comida.png" height="250px" width="350px" alt="foto">
-                                </div>
-                                <h3>PRODUCCIÓN DE ALIMENTOS INSTANTÁNEOS Y NUTRITIVOS</h3>
-                                <p class="desc">Construcción y operación de una planta con tecn... </p>
-                                <a href="https://porlahabana.ch.gob.cu/colaboracion-internacional/cartera-de-proyectos/detalle/2">
-                                    <i class="fa fa-arrow-circle-o-right"></i> Lea más</a>
-                            </div>
-                        </div>
-                    
-
-                
-                    
-                        <div class="col-md-3 col-sm-6 desc-comp-offer wow fadeInUp" data-wow-delay="0.4s" style="visibility: hidden; animation-delay: 0.4s; animation-name: none;">
-                            <div class="desc-comp-offer-cont">
-                                <div class="thumbnail-blogs">
-                                    <div class="caption">
-                                        <i class="fa fa-chain"></i>
-                                    </div>
-                                    <img src="./RELINT_files/ceramica.png" height="250px" width="350px" alt="foto">
-                                </div>
-                                <h3>PRODUCCIÓN DE CERÁMICA PARA PISOS Y PAREDES</h3>
-                                <p class="desc">Construcción y operación de una planta utilizan... </p>
-                                <a href="https://porlahabana.ch.gob.cu/colaboracion-internacional/cartera-de-proyectos/detalle/4">
-                                    <i class="fa fa-arrow-circle-o-right"></i> Lea más</a>
-                            </div>
-                        </div>
-                    
-
-                
-            </div>
-        </div>
-    </section>
-
-    <!--====================================================
-                        NOTICIAS
-    ======================================================-->
-    <section class="py-5 bg-chathams">
-        <a href="https://porlahabana.ch.gob.cu/noticias/1" class="text-decoration-none">
-            <h1 class="text-center wow fadeInUp text-decoration-none cl-white " style="visibility: hidden; animation-name: none;">
-                Noticias
-            </h1>
-        </a>
-        <br>
-        <div class="container">
-            <div class="row mb-2">
-                
-                    
-                        <div class="col-md-6">
-                            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative wow fadeInUp" style="visibility: hidden; animation-name: none;">
-                                <div class="col p-4 d-flex flex-column position-static">
-                                    <h5 class="mb-0 cl-white">VelaHabana firma acuerdo con empresa portuguesa para producir y vender productos de panadería y repostería</h5>
-                                    <div class="mb-1 cl-white">9 de Noviembre de 2023</div>
-                                    <p class="card-text mb-auto cl-white">Concreta VelaHabana, Carta de Intensión con empresa portuguesa para la Administración conjunta de una línea …</p>
-                                    <a href="https://porlahabana.ch.gob.cu/noticias/detail/20" class="btn btn-primary btn-sm">Leer más</a>
-                                </div>
-                                <div class="thumbnail-blogs">
-                                    <img src="./RELINT_files/F-c8QqgWUAALIjU.jpg" alt="Foto" width="200px" height="225px">
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="col-md-6">
-                            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative wow fadeInUp" style="visibility: hidden; animation-name: none;">
-                                <div class="col p-4 d-flex flex-column position-static">
-                                    <h5 class="mb-0 cl-white">VelaHabana SA: el protagonista de la capital en FIHAV 2023</h5>
-                                    <div class="mb-1 cl-white">9 de Noviembre de 2023</div>
-                                    <p class="card-text mb-auto cl-white">En LaHabanaDeTodos las provincias cubanas y la Isla ya tienen montados sus estands en el …</p>
-                                    <a href="https://porlahabana.ch.gob.cu/noticias/detail/19" class="btn btn-primary btn-sm">Leer más</a>
-                                </div>
-                                <div class="thumbnail-blogs">
-                                    <img src="./RELINT_files/F-Nfcr4W0AApn5S.jpg" alt="Foto" width="200px" height="225px">
-                                </div>
-                            </div>
-                        </div>
-                    
-                
-            </div>
-        </div>
-    </section>
-
-<!--====================================================
-                    CONTACT HOME
-======================================================-->
-<div class="overlay-contact-h"></div>
-<section id="contact-h" class="bg-parallax contact-h-bg">
-    <div class="container" id="form_title">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="contact-h-cont">
-                    <h3 class="cl-white">Escríbanos</h3><br>
-                    <form id="my_form" method="post" action="https://porlahabana.ch.gob.cu/post-comment/">
-                        <input type="hidden" name="csrfmiddlewaretoken" value="6JRjfmDBk4u96wsOpfYpkixGyJBxcD0yLuAu4GDy3agyaX71TVdJZ6lzYO4oBday">
-                        <div class="form-group cl-white">
-                            <label for="name">Nombre</label>
-                            <input type="text" class="form-control" name="nombre" id="name" aria-describedby="nameHelp" placeholder="Ej. Juan Pérez">
-                        </div>
-                        <div class="form-group cl-white">
-                            <label for="exampleInputEmail1">Correo electrónico</label>
-                            <input type="email" class="form-control" name="correo" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ej. juanperez@dominio.com">
-                        </div>
-                        <div class="form-group cl-white">
-                            <label for="subject">Asunto</label>
-                            <input type="text" class="form-control" name="titulo" id="subject" aria-describedby="subjectHelp" placeholder="Ej. Sobre proyectos">
-                        </div>
-                        <div class="form-group cl-white">
-                            <label for="message">Mensaje</label>
-                            <textarea class="form-control" name="descripcion" id="message" rows="3"></textarea>
-                        </div>
-                        <div class="form-group cl-white">
-                            <label for="captcha">Escriba las letras de la imagen: </label>
-                            <div>
-                                <img src="./RELINT_files/saved_resource" alt="captcha" class="captcha">
-<input type="hidden" name="captcha_0" value="bba8ec6cab4b54add6afd226ea3b8bd075c257b7" required="" id="id_captcha_0"><input type="text" name="captcha_1" required="" id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
-                            </div>
-                            
-                        </div>
-                        <a class="btn btn-primary" href="javascript:{}" onclick="document.getElementById(&#39;my_form&#39;).submit()" role="button">
-                            Subir</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!--====================================================
-                       NEWS
-======================================================-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="modal fade" id="mision">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div id="modal_overlay" class="overlay" hidden="">
-                <i class="fas fa-2x fa-sync fa-spin" style="margin-top: 140px; margin-left: 230px"></i>
-            </div>
-            <div class="modal-header">
-                <h4 class="modal-title">Misión.</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="card-body">
-                    
-                        <p>Atender en La Habana las actividades de, Comercio
-                    Exterior, Inversión Extranjera, Colaboración Económica y Relaciones Internacionales para elevar la
-                    eficiencia y desarrollar
-                    las potencialidades en estas esferas, logrando la máxima participacion de los municipios y las
-                    entidades.</p>
-                    
-
-                </div>
-                <!-- /.card-body -->
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">
-                    Cerrar</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<div class="modal fade" id="funcionesg">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div id="modal_overlay" class="overlay" hidden="">
-                <i class="fas fa-2x fa-sync fa-spin" style="margin-top: 140px; margin-left: 230px"></i>
-            </div>
-            <div class="modal-header">
-                <h4 class="modal-title">Funciones Generales.</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="card-body">
-                    
-                        <ol><li>Ejecutar y controlar el cumplimiento de las políticas aprobadas por el estado y el gobierno que correspondan en materia de relaciones internacionales, comercio exterior, inversión extranjera y colaboración económica.</li><li>Orientar y coordinar el proceso de identificación y fomento de la oferta exportable de bienes y servicios y la sustitución de importaciones y las oportunidades de inversión extranjera en el desarrollo local.</li><li>Orientar y coordinar el proceso de identificación y fomento de las oportunidades de inversión extranjera en el desarrollo local.</li><li>Coordinar y controlar el desarrollo de la colaboración económica que brinda la provincia de conjunto con los órganos de dirección y demás entidades del territorio.</li><li>Coordinar y controlar el desarrollo de la colaboración económica que el territorio recibe del exterior y su incorporación al Plan de la Economía.</li><li>Coordinar y controlar la atención a los becarios extranjeros que cursan estudios o residen en el territorio.</li><li>Gestionar y asegurar las relaciones internacionales de la Administración Provincial</li></ol>
-                    
-
-                </div>
-                <!-- /.card-body -->
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">
-                    Cerrar</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<div class="modal fade" id="organigrama">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div id="modal_overlay" class="overlay" hidden="">
-                <i class="fas fa-2x fa-sync fa-spin" style="margin-top: 140px; margin-left: 230px"></i>
-            </div>
-            <div class="modal-header">
-                <h4 class="modal-title">Organigrama.</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="card-body">
-                    <center>
-                        <img src="./RELINT_files/Blue_Playfull_Illustrative_Organization_Structure_Graph.jpg" alt="Organigrama Foto" width="600px" height="450px">
-                    </center>
-                </div>
-                <!-- /.card-body -->
-            </div>
-            <div class="modal-footer justify-content-between">
-                <button type="button" class="btn btn-primary pull-right" data-dismiss="modal">
-                    Cerrar</button>
-            </div>
-        </div>
-        <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-</div>
-<!--====================================================
-                      FOOTER
-======================================================-->
-<footer>
-    <div id="footer-s1" class="footer-s1">
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <!-- About Us -->
-                    <div class="col-md-3 col-sm-6 ">
-                        
-                        <ul class="list-unstyled comp-desc-f">
-                            <li><p>La Habana, Ciudad de Oportunidades!! </p></li>
-                            <li><p>Visitas diarias: 3 </p></li>
-                            <li><p>Visitas Totales: 556 </p></li>
-                        </ul>
-                        <br>
-                    </div>
-                    <!-- End About Us -->
-
-                    <!-- Recent News -->
-                    <div class="col-md-3 col-sm-6 ">
-                        <div class="heading-footer"><h2>Rápido Links</h2></div>
-                        <ul class="list-unstyled link-list">
-                            
-                                
-                                    <li><a href="https://porlahabana.ch.gob.cu/inversion-extranjera/cartera-de-oportunidades/1">Cartera de Oportunidades</a><i class="fa fa-angle-right"></i>
-                                    </li>
-                                
-
-                            
-                        </ul>
-                    </div>
-                    <div class="col-md-3 col-sm-6 ">
-                        <div class="heading-footer"><h2>Sitios de Interés</h2></div>
-                        <ul class="list-unstyled link-list">
-                            
-                                
-                                    <li><a href="https://www.mincex.gob.cu/" target="_blank">MINCEX</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="https://www.minrex.gob.cu/es" target="_blank">MINREX</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="http://www.procuba.cu/es" target="_blank">ProCuba</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="http://www.lahabana.gob.cu/" target="_blank">Portal del Ciudadano</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="https://infocap.cu/" target="_blank">InfoCAP</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="https://mapaexportaciones.mincex.gob.cu/" target="_blank">Mapa Exportaciones</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                                
-                                    <li><a href="http://cursos.mincex.gob.cu/" target="_blank">Cursos MINCEX</a><i class="fa fa-angle-right"></i></li>
-                                
-
-                            
-                        </ul>
-                    </div>
-                    <!-- End Recent list -->
-
-                    <!-- Recent Blog Entries -->
-                    <!-- End Recent Blog Entries -->
-
-                    <!-- Latest Tweets -->
-                    <div class="col-md-3 col-sm-6">
-                        <div class="heading-footer"><h2>Estamos en contacto</h2></div>
-                        <address class="address-details-f">
-                            Ave Bélgica y Peña Pobre <br>
-                            La Habana, Cuba <br>
-                            Teléfonos: (+53) 78015566 &amp; 78016655 <br>
-                            
-                        </address>
-                        <ul class="list-inline social-icon-f top-data">
-                            
-                                <li><a href="https://facebook.com/" target="_empty"><i class="fa top-social fa-facebook"></i></a>
-                                </li>
-                            
-                                <li><a href="https://twitter.com/" target="_empty"><i class="fa top-social fa-twitter"></i></a>
-                                </li>
-                            
-                        </ul>
-                    </div>
-                    <!-- End Latest Tweets -->
-                </div>
-            </div><!--/container -->
-        </div>
-    </div>
-
-    <div id="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="footer-copyrights">
-                        <p>Copyrights © 2020 Todos los derechos reservados. Desarrollado por
-                            <a target="_blank" href="https://infocap.cu/">InfoCAP</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a href="https://porlahabana.ch.gob.cu/#home1" id="back-to-top" class="btn btn-sm btn-green btn-back-to-top smooth-scrolls hidden-sm hidden-xs" title="home" role="button">
-        <i class="fa fa-angle-up"></i>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="sr-only" style="position:absolute;top:0;left:0;background:var(--accent);color:white;padding:0.5rem 1rem;z-index:9999;">
+        Saltar al contenido principal
     </a>
-</footer>
 
-<!--Global JavaScript -->
-<script src="./RELINT_files/jquery.min.js"></script>
-<script src="./RELINT_files/popper.min.js"></script>
-<script src="./RELINT_files/bootstrap.min.js"></script>
-<script src="./RELINT_files/wow.min.js"></script>
-<script src="./RELINT_files/owl.carousel.min.js"></script>
-<script src="./RELINT_files/sweetalert2.min.js"></script>
-<!-- Toastr -->
-<script src="./RELINT_files/toastr.min.js"></script>
-<!-- Plugin JavaScript -->
-<script src="./RELINT_files/jquery.easing.min.js"></script>
-<script src="./RELINT_files/custom.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 5000
-        });
-        
-    })
-</script>
-<script>
-    $(document).ready(function () {
-        $("#basic-addon2").click(function () {
-            palabra = $("#id_palabra").val()
-            if (palabra != "") {
-                urlbase = window.location
-                url = urlbase.protocol + "//" + urlbase.host + "/buscar/" + palabra
-                window.location.href = url
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar" role="banner">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="mailto:porlahabana@goblh.gob.cu" aria-label="Enviar correo a porlahabana@goblh.gob.cu">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i> porlahabana@goblh.gob.cu
+                </a>
+                <span><i class="fa-solid fa-phone" aria-hidden="true"></i> (+53) 78015566 &amp; 78016655</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="social-links" aria-label="Redes sociales">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header" role="navigation">
+        <div class="container">
+            <a href="#page-top" class="logo" aria-label="RELINT - Inicio">
+                <div class="logo-icon" aria-hidden="true">R</div>
+                <div class="logo-text">RELI<span>NT</span></div>
+            </a>
+
+            <nav aria-label="Navegacion principal">
+                <ul class="nav-desktop" role="menubar">
+                    <li role="none"><a href="#page-top" role="menuitem">Inicio</a></li>
+                    <li role="none">
+                        <a href="#about" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Identidad <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" role="menuitem" data-modal="mision">Mision</a>
+                            <a href="#" role="menuitem" data-modal="funciones">Funciones Generales</a>
+                            <a href="#" role="menuitem" data-modal="organigrama">Organigrama</a>
+                            <a href="#" role="menuitem">Principales Directivos</a>
+                        </div>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Exportaciones <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" role="menuitem">Leyes y regulaciones</a>
+                            <a href="#" role="menuitem">La Habana Exporta</a>
+                            <a href="#" role="menuitem">La Habana Importa</a>
+                            <a href="#" role="menuitem">Sustitucion de Importaciones</a>
+                        </div>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Inversion <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" role="menuitem">Leyes y regulaciones</a>
+                            <a href="#" role="menuitem">Cartera de Oportunidades</a>
+                            <a href="#" role="menuitem">Inversiones en Desarrollo</a>
+                            <a href="#" role="menuitem">Sectores Priorizados</a>
+                        </div>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Colaboracion <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" role="menuitem">Leyes y regulaciones</a>
+                            <a href="#" role="menuitem">La Habana Ofrece</a>
+                            <a href="#" role="menuitem">La Habana Recibe</a>
+                            <a href="#" role="menuitem">Cartera de Proyectos</a>
+                            <a href="#" role="menuitem">Incubadora de Proyectos</a>
+                        </div>
+                    </li>
+                    <li role="none">
+                        <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false">
+                            Relaciones <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="#" role="menuitem">Leyes y Regulaciones</a>
+                            <a href="#" role="menuitem">Estudiantes Extranjeros</a>
+                            <a href="#" role="menuitem">Habaneros por el mundo</a>
+                            <a href="#" role="menuitem">Extranjeros en La Habana</a>
+                            <a href="#" role="menuitem">Amigos de La Habana</a>
+                        </div>
+                    </li>
+                    <li role="none"><a href="#news" role="menuitem">Noticias</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-search">
+                <button onclick="toggleSearch()" aria-label="Buscar">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <button class="nav-toggle" onclick="toggleMobileNav()" aria-label="Abrir menu de navegacion" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <ul class="nav-mobile" id="navMobile" role="menu">
+            <li role="none"><a href="#page-top" role="menuitem" onclick="closeMobileNav()">Inicio</a></li>
+            <li role="none">
+                <a href="#" role="menuitem" onclick="toggleMobileDropdown(event, this)">
+                    Identidad <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                </a>
+                <div class="mobile-dropdown">
+                    <a href="#" data-modal="mision" onclick="closeMobileNav()">Mision</a>
+                    <a href="#" data-modal="funciones" onclick="closeMobileNav()">Funciones Generales</a>
+                    <a href="#" data-modal="organigrama" onclick="closeMobileNav()">Organigrama</a>
+                    <a href="#" onclick="closeMobileNav()">Principales Directivos</a>
+                </div>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" onclick="toggleMobileDropdown(event, this)">
+                    Exportaciones <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                </a>
+                <div class="mobile-dropdown">
+                    <a href="#" onclick="closeMobileNav()">Leyes y regulaciones</a>
+                    <a href="#" onclick="closeMobileNav()">La Habana Exporta</a>
+                    <a href="#" onclick="closeMobileNav()">La Habana Importa</a>
+                    <a href="#" onclick="closeMobileNav()">Sustitucion de Importaciones</a>
+                </div>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" onclick="toggleMobileDropdown(event, this)">
+                    Inversion <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                </a>
+                <div class="mobile-dropdown">
+                    <a href="#" onclick="closeMobileNav()">Leyes y regulaciones</a>
+                    <a href="#" onclick="closeMobileNav()">Cartera de Oportunidades</a>
+                    <a href="#" onclick="closeMobileNav()">Inversiones en Desarrollo</a>
+                    <a href="#" onclick="closeMobileNav()">Sectores Priorizados</a>
+                </div>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" onclick="toggleMobileDropdown(event, this)">
+                    Colaboracion <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                </a>
+                <div class="mobile-dropdown">
+                    <a href="#" onclick="closeMobileNav()">Leyes y regulaciones</a>
+                    <a href="#" onclick="closeMobileNav()">La Habana Ofrece</a>
+                    <a href="#" onclick="closeMobileNav()">La Habana Recibe</a>
+                    <a href="#" onclick="closeMobileNav()">Cartera de Proyectos</a>
+                    <a href="#" onclick="closeMobileNav()">Incubadora de Proyectos</a>
+                </div>
+            </li>
+            <li role="none">
+                <a href="#" role="menuitem" onclick="toggleMobileDropdown(event, this)">
+                    Relaciones <i class="fa-solid fa-chevron-down chevron" aria-hidden="true"></i>
+                </a>
+                <div class="mobile-dropdown">
+                    <a href="#" onclick="closeMobileNav()">Leyes y Regulaciones</a>
+                    <a href="#" onclick="closeMobileNav()">Estudiantes Extranjeros</a>
+                    <a href="#" onclick="closeMobileNav()">Habaneros por el mundo</a>
+                    <a href="#" onclick="closeMobileNav()">Extranjeros en La Habana</a>
+                    <a href="#" onclick="closeMobileNav()">Amigos de La Habana</a>
+                </div>
+            </li>
+            <li role="none"><a href="#news" role="menuitem" onclick="closeMobileNav()">Noticias</a></li>
+        </ul>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay" role="dialog" aria-label="Buscar en el sitio">
+        <button class="search-close" onclick="toggleSearch()" aria-label="Cerrar busqueda">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="search-overlay-inner">
+            <input type="text" id="searchInput" placeholder="Buscar..." aria-label="Buscar en el sitio" autocomplete="off">
+        </div>
+    </div>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main id="main-content">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero" aria-label="Seccion principal">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+                        Relaciones Internacionales de La Habana
+                    </div>
+                    <h1>La Habana,<br><span class="highlight">Ciudad de Oportunidades</span></h1>
+                    <p class="hero-subtitle">
+                        Comercio Exterior, Inversion Extranjera, Colaboracion Economica
+                        y Relaciones Internacionales para elevar la eficiencia y desarrollar
+                        las potencialidades de nuestra ciudad.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contactanos
+                        </a>
+                        <a href="#about" class="btn btn-secondary">
+                            Conocer mas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="number">4</div>
+                            <div class="label">Areas Clave</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number">15+</div>
+                            <div class="label">Municipios</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="number">500+</div>
+                            <div class="label">Proyectos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="hero-scroll" aria-label="Desplazarse hacia abajo">
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </section>
+
+        <!-- ===== ABOUT / MISSION ===== -->
+        <section id="about" class="section about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-content animate-on-scroll">
+                        <h2 id="about-title">Nuestra Mision</h2>
+                        <p>
+                            Atender en La Habana las actividades de Comercio Exterior,
+                            Inversion Extranjera, Colaboracion Economica y Relaciones
+                            Internacionales para elevar la eficiencia y desarrollar las
+                            potencialidades en estas esferas, logrando la maxima
+                            participacion de los municipios y las entidades.
+                        </p>
+                        <a href="#" class="btn btn-outline" data-modal="mision">
+                            Leer mas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="about-features animate-on-scroll">
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Comercio Exterior</h5>
+                                <p>Priorizar la sustitucion de importaciones y el analisis de productos exportables.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fa-solid fa-building-columns" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Inversion Extranjera</h5>
+                                <p>Orientar el fomento de ofertas exportables de bienes y servicios.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Colaboracion Economica</h5>
+                                <p>Gestionar la colaboracion de organizaciones internacionales.</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon"><i class="fa-solid fa-earth-americas" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Relaciones Internacionales</h5>
+                                <p>Coordinar acciones de atencion a becarios y residentes extranjeros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SERVICES ===== -->
+        <section id="services" class="section services" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="services-title">Nuestras Areas</h2>
+                    <p>Trabajamos en cuatro esferas fundamentales para el desarrollo integral de La Habana.</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card animate-on-scroll" tabindex="0">
+                        <div class="service-card-icon"><i class="fa-solid fa-ship" aria-hidden="true"></i></div>
+                        <h4>Comercio Exterior</h4>
+                        <p>Priorizar la sustitucion de importaciones asi como el analisis de productos posibles a exportar.</p>
+                    </article>
+                    <article class="service-card animate-on-scroll" tabindex="0">
+                        <div class="service-card-icon"><i class="fa-solid fa-coins" aria-hidden="true"></i></div>
+                        <h4>Inversion Extranjera</h4>
+                        <p>Orientar y coordinar el fomento de ofertas exportables de bienes y servicios en las entidades y en los municipios.</p>
+                    </article>
+                    <article class="service-card animate-on-scroll" tabindex="0">
+                        <div class="service-card-icon"><i class="fa-solid fa-arrows-spin" aria-hidden="true"></i></div>
+                        <h4>Colaboracion Economica</h4>
+                        <p>Promover el diseno de proyectos para gestionar la colaboracion de organizaciones internacionales y paises amigos.</p>
+                    </article>
+                    <article class="service-card animate-on-scroll" tabindex="0">
+                        <div class="service-card-icon"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+                        <h4>Relaciones Internacionales</h4>
+                        <p>Coordinar y controlar las acciones de atencion a becarios extranjeros que cursan estudios en el territorio.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" class="section projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="projects-title">Cartera de Proyectos</h2>
+                    <p>Oportunidades de inversion y colaboracion en La Habana.</p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-card-img-wrapper">
+                            <img src="./RELINT_files/banno.png" alt="Produccion de Muebles Sanitarios" class="project-card-img" loading="lazy">
+                        </div>
+                        <div class="project-card-body">
+                            <h4>Produccion de Muebles Sanitarios</h4>
+                            <p>Construccion y operacion de una planta utilizando tecnologia de punta para la fabricacion de muebles sanitarios.</p>
+                            <a href="#">Leer mas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-card-img-wrapper">
+                            <img src="./RELINT_files/comida.png" alt="Produccion de Alimentos Instantaneos" class="project-card-img" loading="lazy">
+                        </div>
+                        <div class="project-card-body">
+                            <h4>Produccion de Alimentos Instantaneos y Nutritivos</h4>
+                            <p>Construccion y operacion de una planta con tecnologia avanzada para alimentos de alta calidad nutricional.</p>
+                            <a href="#">Leer mas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                    <article class="project-card animate-on-scroll">
+                        <div class="project-card-img-wrapper">
+                            <img src="./RELINT_files/ceramica.png" alt="Produccion de Ceramica" class="project-card-img" loading="lazy">
+                        </div>
+                        <div class="project-card-body">
+                            <h4>Produccion de Ceramica para Pisos y Paredes</h4>
+                            <p>Construccion y operacion de una planta utilizando tecnologia moderna para ceramica de alta calidad.</p>
+                            <a href="#">Leer mas <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;" class="animate-on-scroll">
+                    <a href="#" class="btn btn-secondary">
+                        Ver todos los proyectos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== NEWS ===== -->
+        <section id="news" class="section news" aria-labelledby="news-title">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2 id="news-title">Noticias</h2>
+                    <p>Ultimas novedades sobre comercio, inversion y relaciones internacionales.</p>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card animate-on-scroll">
+                        <img src="./RELINT_files/F-c8QqgWUAALIjU.jpg" alt="VelaHabana firma acuerdo con empresa portuguesa" class="news-card-img" loading="lazy">
+                        <div class="news-card-body">
+                            <div class="news-card-date">
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i> 9 de Noviembre de 2023
+                            </div>
+                            <h4>VelaHabana firma acuerdo con empresa portuguesa</h4>
+                            <p>Concreta VelaHabana Carta de Intencion con empresa portuguesa para la Administracion conjunta de una linea de produccion...</p>
+                            <a href="#" class="btn btn-primary">Leer mas</a>
+                        </div>
+                    </article>
+                    <article class="news-card animate-on-scroll">
+                        <img src="./RELINT_files/F-Nfcr4W0AApn5S.jpg" alt="VelaHabana SA protagonista en FIHAV 2023" class="news-card-img" loading="lazy">
+                        <div class="news-card-body">
+                            <div class="news-card-date">
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i> 9 de Noviembre de 2023
+                            </div>
+                            <h4>VelaHabana SA: protagonista de la capital en FIHAV 2023</h4>
+                            <p>En LaHabanaDeTodos las provincias cubanas y la Isla ya tienen montados sus estands en el evento...</p>
+                            <a href="#" class="btn btn-primary">Leer mas</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info animate-on-scroll">
+                        <h2 id="contact-title">Escribanos</h2>
+                        <p>Estamos disponibles para atender sus consultas sobre comercio exterior, inversiones y colaboracion internacional.</p>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Direccion</h5>
+                                <p>Ave Belgica y Pena Pobre, La Habana, Cuba</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-phone" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Telefonos</h5>
+                                <p>(+53) 78015566 &amp; 78016655</p>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-detail-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></div>
+                            <div>
+                                <h5>Correo</h5>
+                                <p>porlahabana@goblh.gob.cu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form animate-on-scroll">
+                        <h3>Envie su mensaje</h3>
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name">Nombre</label>
+                                <input type="text" id="contact-name" name="nombre" placeholder="Ej. Juan Perez" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Correo electronico</label>
+                                <input type="email" id="contact-email" name="correo" placeholder="Ej. juanperez@dominio.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Asunto</label>
+                                <input type="text" id="contact-subject" name="titulo" placeholder="Ej. Sobre proyectos" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Mensaje</label>
+                                <textarea id="contact-message" name="descripcion" rows="4" placeholder="Escriba su mensaje aqui..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Enviar mensaje
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== MODALS ===== -->
+
+    <!-- Mission Modal -->
+    <div class="modal-overlay" id="modal-mision" role="dialog" aria-modal="true" aria-labelledby="modal-mision-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-mision-title">Mision</h3>
+                <button class="modal-close" onclick="closeModal('mision')" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Atender en La Habana las actividades de Comercio Exterior,
+                Inversion Extranjera, Colaboracion Economica y Relaciones
+                Internacionales para elevar la eficiencia y desarrollar las
+                potencialidades en estas esferas, logrando la maxima participacion
+                de los municipios y las entidades.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('mision')">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Functions Modal -->
+    <div class="modal-overlay" id="modal-funciones" role="dialog" aria-modal="true" aria-labelledby="modal-funciones-title">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3 id="modal-funciones-title">Funciones Generales</h3>
+                <button class="modal-close" onclick="closeModal('funciones')" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li>Ejecutar y controlar el cumplimiento de las politicas aprobadas por el estado y el gobierno que correspondan en materia de relaciones internacionales, comercio exterior, inversion extranjera y colaboracion economica.</li>
+                    <li>Orientar y coordinar el proceso de identificacion y fomento de la oferta exportable de bienes y servicios y la sustitucion de importaciones y las oportunidades de inversion extranjera en el desarrollo local.</li>
+                    <li>Orientar y coordinar el proceso de identificacion y fomento de las oportunidades de inversion extranjera en el desarrollo local.</li>
+                    <li>Coordinar y controlar el desarrollo de la colaboracion economica que brinda la provincia de conjunto con los organos de direccion y demas entidades del territorio.</li>
+                    <li>Coordinar y controlar el desarrollo de la colaboracion economica que el territorio recibe del exterior y su incorporacion al Plan de la Economia.</li>
+                    <li>Coordinar y controlar la atencion a los becarios extranjeros que cursan estudios o residen en el territorio.</li>
+                    <li>Gestionar y asegurar las relaciones internacionales de la Administracion Provincial.</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('funciones')">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Organigrama Modal -->
+    <div class="modal-overlay" id="modal-organigrama" role="dialog" aria-modal="true" aria-labelledby="modal-organigrama-title">
+        <div class="modal-content modal-lg">
+            <div class="modal-header">
+                <h3 id="modal-organigrama-title">Organigrama</h3>
+                <button class="modal-close" onclick="closeModal('organigrama')" aria-label="Cerrar">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <img src="./RELINT_files/Blue_Playfull_Illustrative_Organization_Structure_Graph.jpg"
+                     alt="Organigrama de la organizacion" loading="lazy"
+                     style="max-width: 100%; border-radius: var(--radius-md);">
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal('organigrama')">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h5>RELINT</h5>
+                    <p>La Habana, Ciudad de Oportunidades. Direccion de Relaciones Internacionales trabajando por el desarrollo integral de la capital.</p>
+                    <div class="social-links">
+                        <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Links Rapidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Cartera de Oportunidades</a></li>
+                        <li><a href="#">La Habana Exporta</a></li>
+                        <li><a href="#">Inversiones en Desarrollo</a></li>
+                        <li><a href="#">Cartera de Proyectos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Sitios de Interes</h5>
+                    <ul class="footer-links">
+                        <li><a href="https://www.mincex.gob.cu/" target="_blank" rel="noopener noreferrer">MINCEX</a></li>
+                        <li><a href="https://www.minrex.gob.cu/es" target="_blank" rel="noopener noreferrer">MINREX</a></li>
+                        <li><a href="http://www.procuba.cu/es" target="_blank" rel="noopener noreferrer">ProCuba</a></li>
+                        <li><a href="http://www.lahabana.gob.cu/" target="_blank" rel="noopener noreferrer">Portal del Ciudadano</a></li>
+                        <li><a href="https://infocap.cu/" target="_blank" rel="noopener noreferrer">InfoCAP</a></li>
+                        <li><a href="https://mapaexportaciones.mincex.gob.cu/" target="_blank" rel="noopener noreferrer">Mapa Exportaciones</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h5>Contacto</h5>
+                    <address>
+                        <i class="fa-solid fa-location-dot" aria-hidden="true"></i> Ave Belgica y Pena Pobre<br>
+                        <i class="fa-solid fa-map" aria-hidden="true"></i> La Habana, Cuba<br>
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i> (+53) 78015566 &amp; 78016655<br>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i> porlahabana@goblh.gob.cu
+                    </address>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 RELINT - Todos los derechos reservados. Desarrollado por
+                    <a href="https://infocap.cu/" target="_blank" rel="noopener noreferrer">InfoCAP</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Volver arriba">
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-        })
-    })
-</script>
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
 
+        // Mobile navigation
+        function toggleMobileNav() {
+            var nav = document.getElementById('navMobile');
+            var toggle = document.querySelector('.nav-toggle');
+            nav.classList.toggle('active');
+            toggle.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', nav.classList.contains('active'));
+            document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        }
 
+        function closeMobileNav() {
+            var nav = document.getElementById('navMobile');
+            var toggle = document.querySelector('.nav-toggle');
+            nav.classList.remove('active');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
 
-<style type="text/css">.typewrite > .wrap { border-right: 0.08em solid #fff}</style></body></html>
+        function toggleMobileDropdown(e, el) {
+            e.preventDefault();
+            var dropdown = el.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('open');
+            }
+        }
+
+        // Search
+        function toggleSearch() {
+            var overlay = document.getElementById('searchOverlay');
+            overlay.classList.toggle('active');
+            if (overlay.classList.contains('active')) {
+                document.getElementById('searchInput').focus();
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        document.getElementById('searchInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                var word = this.value.trim();
+                if (word) {
+                    var loc = window.location;
+                    window.location.href = loc.protocol + '//' + loc.host + '/buscar/' + encodeURIComponent(word);
+                }
+            }
+            if (e.key === 'Escape') {
+                toggleSearch();
+            }
+        });
+
+        // Modals
+        document.querySelectorAll('[data-modal]').forEach(function(el) {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                var modalId = 'modal-' + this.getAttribute('data-modal');
+                openModal(modalId);
+            });
+        });
+
+        function openModal(id) {
+            var modal = document.getElementById(id);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                // Focus trap
+                var focusable = modal.querySelector('button, [href], input, select, textarea');
+                if (focusable) focusable.focus();
+            }
+        }
+
+        function closeModal(name) {
+            var modal = document.getElementById('modal-' + name);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close modal on overlay click
+        document.querySelectorAll('.modal-overlay').forEach(function(overlay) {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        // Close modal on Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.active').forEach(function(m) {
+                    m.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Scroll animations (Intersection Observer)
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
